@@ -1,7 +1,7 @@
 {
   "name": "theme-chalk",
   "version": "0.0.1",
-  "description": "rv-ui component chalk theme.",
+  "description": "zv-ui component chalk theme.",
   "main": "lib/index.css",
   "directories": {
     "lib": "lib"
