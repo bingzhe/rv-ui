@@ -1,17 +1,17 @@
 import ZIcon from "../packages/icon/index.js";
 
 const components = [
-    ZIcon
+  ZIcon
 ];
 
 const install = function (Vue, opts = {}) {
-    components.forEach(component => {
-        Vue.component(component.name, component);
-    });
+  components.forEach(component => {
+    Vue.component(component.name, component);
+  });
 };
 
-if (typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue);
+if (typeof window !== "undefined" && window.Vue) {
+  install(window.Vue);
 }
 
 // module.exports = {
@@ -22,6 +22,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 // module.exports.default = module.exports;
 
 export default {
-    install,
-    ZIcon
-}
+  install,
+  ZIcon
+};

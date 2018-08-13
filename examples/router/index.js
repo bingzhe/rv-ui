@@ -1,25 +1,25 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Vue from "vue";
+import Router from "vue-router";
+import HelloWorld from "@/components/HelloWorld";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
+      path: "/",
+      name: "HelloWorld",
       component: HelloWorld
     },
     {
-      path: '/test',
-      name: 'test',
-      component: r => require.ensure([], () => r(require('../docs/test.md')))
+      path: "/test",
+      name: "test",
+      component: r => require.ensure([], () => r(require("../docs/test.md")))
     },
     {
-      path: '/icon',
-      name: 'icon',
-      component: r => require.ensure([], () => r(require('../docs/icon.md')))
+      path: "/icon",
+      name: "icon",
+      component: r => require.ensure([], () => r(require("../docs/icon.md")))
     }
   ]
-})
+});
