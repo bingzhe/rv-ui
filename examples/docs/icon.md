@@ -71,14 +71,16 @@
 
 直接通过设置类名为 `el-icon-iconName` 来使用即可。例如：
 
+
+
+:::demo 由`max`属性定义，它接受一个`Number`，需要注意的是，只有当`value`为`Number`时，它才会生效
+``` html
 <div class="demo-block">
     <i class="anticon icon-banckward"></i>
     <z-icon type="icon-banckward" />
     <!-- <el-button></el-button> -->
 </div>
-
-:::demo
-
+```
 :::
 
 ### 图标集合
