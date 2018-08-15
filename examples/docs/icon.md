@@ -77,7 +77,9 @@
 ``` html
 <div class="demo-block">
     <i class="anticon icon-banckward"></i>
-    <z-icon type="icon-banckward" />
+    <i class="anticon icon-banckward"></i>
+    <i class="anticon icon-banckward"></i>
+    <z-icon :type="icon-banckward" />
     <!-- <el-button></el-button> -->
 </div>
 ```
