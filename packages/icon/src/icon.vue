@@ -2,7 +2,8 @@
     <i 
       :class="classes"
       v-on="$listeners"
-    ></i>
+    >
+    </i>
 </template>
 
 <script>
@@ -11,8 +12,8 @@ export default {
 
   props: {
     prefixCls: {
-      default: "anticon",
-      type: String
+      type: String,
+      default: "anticon"
     },
     type: String,
     spin: Boolean

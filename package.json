@@ -1,9 +1,9 @@
 {
-  "name": "zv-ui",
+  "name": "zlv-ui",
   "version": "0.0.1",
   "description": "vue2.0 ui",
   "author": "bingzhe <ranzhouli@foxmail.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "build:theme": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

@@ -74,14 +74,25 @@
 
 
 :::demo 由`max`属性定义，它接受一个`Number`，需要注意的是，只有当`value`为`Number`时，它才会生效
+
 ``` html
-<div class="demo-block">
     <i class="anticon icon-banckward"></i>
     <i class="anticon icon-banckward"></i>
     <i class="anticon icon-banckward"></i>
-    <z-icon :type="icon-banckward" />
+    <span>
+      <z-icon type="icon-banckward" />
+    </span>
+        <span>
+      <z-icon type="icon-banckward" />
+    </span>
+    <span>
+      <z-icon type="icon-banckward" />
+    </span>
+      <span>
+      <z-icon type="icon-banckward" />
+    </span>
+
     <!-- <el-button></el-button> -->
-</div>
 ```
 :::
 

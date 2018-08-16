@@ -33,9 +33,13 @@
         :class="{'is-fixed': fixedControl}"
         @click="isExpanded = !isExpanded"
       >
-        <transition name="arrow-slide">
-          <z-icon :type="iconClass"></z-icon>
-        </transition>
+        <!-- <transition name="arrow-slide"> -->
+          <z-icon 
+            class="demo-block-contro__icon"
+            :type="iconClass" 
+            :class="{'hovering':hovering}"
+          ></z-icon>
+        <!-- </transition> -->
         <transition name="text-slide">
           <span v-show="hovering">{{ controlText }}</span>
         </transition>
@@ -60,13 +64,23 @@ export default {
       return "";
     },
     iconClass() {
-      return this.isExpanded ? "caret-up" : "caret-down";
+      return this.isExpanded ? "icon-caretup" : "icon-caretdown";
     },
     controlText() {
       return this.isExpanded ? "显示代码" : "隐藏代码";
     },
     codeArea() {
       return this.$el.getElementsByClassName("meta")[0];
+    },
+    codeAreaHeight() {
+      if (this.$el.getElementsByClassName("description").length > 0) {
+        return (
+          this.$el.getElementsByClassName("description")[0].clientHeight +
+          this.$el.getElementsByClassName("highlight")[0].clientHeight +
+          20
+        );
+      }
+      return this.$el.getElementsByClassName("highlight")[0].clientHeight;
     }
   },
   watch: {
@@ -289,7 +303,8 @@ export default {
       width: 868px;
     }
 
-    i {
+    .demo-block-contro__icon {
+      display: inline-block;
       font-size: 16px;
       line-height: 44px;
       transition: 0.3s;

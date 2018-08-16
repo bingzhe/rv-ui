@@ -61,11 +61,12 @@ const vueMarkdown = {
 
 const vueMarkdownOpts = {
   use: [
+    //添加锚链接，## Next section! <h2 id="next-section!">Next section!</h2>
     [require('markdown-it-anchor'), {
       level: 2,
       slugify: slugify,
       permalink: true,
-      permalinkBefore: true
+      permalinkBefore: true,
     }],
     [require('markdown-it-container'), 'demo', {
       validate: function (params) {
@@ -74,7 +75,8 @@ const vueMarkdownOpts = {
 
       render: function (tokens, idx) {
         var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
-        if (tokens[idx].nesting === 1) {
+    
+        if (tokens[idx].nesting === 1) { //开标签
           var description = (m && m.length > 1) ? m[1] : '';
           var content = tokens[idx + 1].content;
           var html = convert(striptags.strip(content, ['script', 'style'])).replace(/(<[^>]*)=""(?=.*>)/g, '$1');
