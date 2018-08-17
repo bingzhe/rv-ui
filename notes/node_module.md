@@ -58,3 +58,24 @@ https://www.npmjs.com/package/markdown-it-container
 <em>here be dragons</em>
 </div>
 ```
+
+### vue-clipboard2
+
+vue复制到剪贴板组件
+
+https://www.npmjs.com/package/vue-clipboard2
+
+
+``` js
+//import
+import VueClipboard from "vue-clipboard2";
+Vue.use(VueClipboard);
+//use
+<button 
+  type="button"
+  v-clipboard:copy="message"
+  v-clipboard:success="onCopy"
+  v-clipboard:error="onError"
+>Copy!</button>
+```
+

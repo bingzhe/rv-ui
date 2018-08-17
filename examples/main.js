@@ -4,14 +4,18 @@ import router from "./router";
 
 Vue.config.productionTip = false;
 
-import DemoBlock from "./components/demo-block.vue";
+//zv-ui
 import ZVUI from "../src/index.js";
-console.log(ZVUI);
-
 import "../packages/theme-chalk/lib/index.css";
-
-Vue.component("demo-block", DemoBlock);
 Vue.use(ZVUI);
+
+//copied
+import VueClipboard from "vue-clipboard2";
+Vue.use(VueClipboard);
+
+//example components
+import DemoBlock from "./components/demo-block.vue";
+Vue.component("demo-block", DemoBlock);
 
 import "./assets/scss/index.scss";
 

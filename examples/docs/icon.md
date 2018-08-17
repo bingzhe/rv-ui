@@ -1,5 +1,14 @@
+<script>
+  import IconList from "../components/IconSet/index.vue";
+
+  export default {
+    components: {
+      IconList
+    }  
+  }
+</script>
 <style>
-  .demo-icon .source > i {
+  /* .demo-icon .source > i {
     color: #606266;
     margin: 0 20px;
     font-size: 1.5em;
@@ -60,7 +69,7 @@
     &:hover {
       color: rgb(92, 182, 255);
     }
-  }
+  } */
 </style>
 
 # Icon 图标
@@ -106,3 +115,5 @@
     </span>
   </li>
 </ul> -->
+
+<icon-list />
