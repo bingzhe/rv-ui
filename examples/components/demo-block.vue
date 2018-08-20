@@ -1,19 +1,4 @@
 <template>
-    <!-- <div class="docs-demo-wrapper">
-        <div :style="{height: isExpand?'auto':'0'}" class="demo-container">
-            <div span="14">
-                <div class="docs-demo docs-demo--expand">
-                    <div class="highlight-wrapper">
-                        <slot name="highlight"></slot>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <span class="docs-trans docs-demo__triangle" @click="toggle">
-            {{ isExpand ? '隐藏代码' : '显示代码'}}
-        </span>
-    </div> -->
-
     <div 
       class="demo-block"
       :class="[blockClass, {'hover':hovering}]"
@@ -282,6 +267,23 @@ export default {
       border-radius: 3px;
       height: 18px;
       line-height: 18px;
+    }
+  }
+
+  .highlight {
+    pre {
+      margin: 0;
+    }
+
+    code.hljs {
+      margin: 0;
+      border: none;
+      max-height: none;
+      border-radius: 0;
+
+      &::before {
+        content: none;
+      }
     }
   }
   .demo-block-control {

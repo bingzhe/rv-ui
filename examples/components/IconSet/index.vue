@@ -332,7 +332,7 @@ li {
 }
 
 .icons {
-  margin: 40px 0;
+  margin: 0;
   list-style: none;
   overflow: hidden;
 }
