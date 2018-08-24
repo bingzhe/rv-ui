@@ -1,6 +1,7 @@
 <template>
-    <div
-        class="z-button"
+    <button
+        class="z-button red-btn" 
+        style="height: 30px; width: 40px;"
         :class="[
             type ? 'z-button--' + type : '',
             buttonSize ? 'z-button--' + buttonSize : '',
@@ -14,7 +15,7 @@
         ]"
     >
 
-    </div>
+    </button>
 </template>
 
 <script>

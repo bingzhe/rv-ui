@@ -1,7 +1,9 @@
 import ZIcon from "../packages/icon/index.js";
+import ZButton from "../packages/button/index.js";
 
 const components = [
-  ZIcon
+  ZIcon,
+  ZButton
 ];
 
 const install = function (Vue, opts = {}) {
@@ -23,5 +25,6 @@ if (typeof window !== "undefined" && window.Vue) {
 
 export default {
   install,
-  ZIcon
+  ZIcon,
+  ZButton
 };
