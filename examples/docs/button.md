@@ -18,5 +18,21 @@
         <z-button type="warning" plain>警告按钮</z-button>
         <z-button type="danger" plain>危险按钮</z-button>        
     </div>
+    <div style="margin-top:10px">
+        <z-button round>朴素按钮</z-button>
+        <z-button type="primary" round>主要按钮</z-button>
+        <z-button type="success" round>成功按钮</z-button>
+        <z-button type="info" round>信息按钮</z-button>
+        <z-button type="warning" round>警告按钮</z-button>
+        <z-button type="danger" round>危险按钮</z-button>        
+    </div>
+    <div style="margin-top:10px">
+        <z-button circle></z-button>
+        <z-button type="primary" circle></z-button>
+        <z-button type="success" circle></z-button>
+        <z-button type="info" circle></z-button>
+        <z-button type="warning" circle></z-button>
+        <z-button type="danger" circle></z-button>        
+    </div>    
 ```
 :::

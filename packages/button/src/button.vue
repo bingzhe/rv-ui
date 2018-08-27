@@ -13,6 +13,8 @@
             }
         ]"
     >
+      <z-icon :type="icon" v-if="loading"/>
+      <z-icon :type="icon" v-if="icon && !loading" />
       <span v-if="$slots.default">
         <slot></slot>
       </span>
@@ -20,8 +22,23 @@
 </template>
 
 <script>
+// import ZIcon from "../../icon/index.js";
+
 export default {
   name: "ZButton",
+
+  components: {
+    // ZIcon
+  },
+
+  inject: {
+    zForm: {
+      default: "",
+    },
+    zFormItem: {
+      default: "",
+    }
+  },
   props: {
     type: {
       type: String,
