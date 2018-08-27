@@ -1,7 +1,6 @@
 <template>
     <button
-        class="z-button red-btn" 
-        style="height: 30px; width: 40px;"
+        class="z-button" 
         :class="[
             type ? 'z-button--' + type : '',
             buttonSize ? 'z-button--' + buttonSize : '',
@@ -14,7 +13,9 @@
             }
         ]"
     >
-
+      <span v-if="$slots.default">
+        <slot></slot>
+      </span>
     </button>
 </template>
 
