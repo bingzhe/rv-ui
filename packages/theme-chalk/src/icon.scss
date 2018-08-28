@@ -1209,8 +1209,8 @@
     content: "\e706";
 }
 
-.icon-loading1:before,
-.icon-loading2:before {
+.icon-loading2,
+.icon-loading1 {
     animation: rotating 2s linear infinite;
 }
 

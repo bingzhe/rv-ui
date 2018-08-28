@@ -1,6 +1,7 @@
 <template>
     <button
         class="z-button" 
+        @click="handleClick"
         :class="[
             type ? 'z-button--' + type : '',
             buttonSize ? 'z-button--' + buttonSize : '',
@@ -13,7 +14,7 @@
             }
         ]"
     >
-      <z-icon :type="icon" v-if="loading"/>
+      <z-icon class="v-icon-loading" :type="icon" v-if="loading"/>
       <z-icon :type="icon" v-if="icon && !loading" />
       <span v-if="$slots.default">
         <slot></slot>
@@ -22,23 +23,18 @@
 </template>
 
 <script>
-// import ZIcon from "../../icon/index.js";
-
 export default {
   name: "ZButton",
 
-  components: {
-    // ZIcon
-  },
-
   inject: {
     zForm: {
-      default: "",
+      default: ""
     },
     zFormItem: {
-      default: "",
+      default: ""
     }
   },
+
   props: {
     type: {
       type: String,
@@ -62,11 +58,20 @@ export default {
   },
 
   computed: {
+    _zFormItemSize() {
+      return (this.zFormItem || {}).zFormItemSize;
+    },
     buttonSize() {
-      return this.size;
+      return this.size || this._zFormItemSize || (this.$ELEMENT || {}).size;
     },
     buttonDisabled() {
-      return this.disabled;
+      return this.disabled || (this.elForm || {}).disabled;
+    }
+  },
+
+  methods: {
+    handleClick(evt) {
+      this.$emit("click", evt);
     }
   }
 };
