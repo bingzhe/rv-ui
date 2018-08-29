@@ -1,7 +1,7 @@
-import ZButton from "./src/button.vue"
+import ZButton from "./src/button.vue";
 
 ZButton.install = function (Vue) {
-    Vue.component(ZButton.name, ZButton);
+  Vue.component(ZButton.name, ZButton);
 };
 
-export default ZButton
+export default ZButton;
