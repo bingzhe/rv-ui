@@ -1,31 +1,23 @@
-const transliteration = require('transliteration');
-
-console.log(transliteration);
-console.log(transliteration.transliterate('你好, world'));
-console.log(transliteration.slugify("你好， world"));
-
-
-function foo(a) {
-    var b = a * 2;
-    function bar(c) {
-        console.log(a, b, c);
-    }
-    bar(b * 3);
+function Foo(who) {
+    this.me = who;
 }
 
-foo(2);
-
-
-for (var i = 1; i <= 5; i++) {
-    setTimeout(function timer() {
-        console.log(i);
-    }, i * 1000)
+Foo.prototype.identify = function () {
+    return " I am " + this.me;
 }
 
-for (var i = 1; i <= 5; i++) {
-    (function (j) {
-        setTimeout(function timer() {
-            console.log(j);
-        }, j * 1000)
-    })(i)
+function Bar(who) {
+    Foo.call(this, who);
 }
+
+Bar.prototype = Object.create(Foo.prototype);
+
+Bar.prototype.speak = function () {
+    alert("Hello, " + this.identify() + ".");
+}
+
+var b1 = new Bar("b1");
+var b2 = new Bar("b2");
+
+b1.speak();
+b2.speak();

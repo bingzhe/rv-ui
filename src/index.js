@@ -2,12 +2,14 @@ import ZIcon from "../packages/icon/index.js";
 import ZButton from "../packages/button/index.js";
 import ZButtonGroup from "../packages/button-group/index.js";
 import ZCol from "../packages/col/index.js";
+import ZRow from "../packages/row/index.js";
 
 const components = [
   ZIcon,
   ZButton,
   ZButtonGroup,
-  ZCol
+  ZCol,
+  ZRow
 ];
 
 const install = function (Vue, opts = {}) {
@@ -32,5 +34,6 @@ export default {
   ZIcon,
   ZButton,
   ZButtonGroup,
-  ZCol
+  ZCol,
+  ZRow
 };
