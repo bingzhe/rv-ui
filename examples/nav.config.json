@@ -25,7 +25,13 @@
         {
             "desc": "视图组件",
             "path": "/component",
-            "items": []
+            "items": [
+                {
+                    "desc": "Model 对话框",
+                    "name": "model",
+                    "path": "/model"
+                }
+            ]
         }
     ]
 }

@@ -6,7 +6,7 @@
             <div class="z-dialog">
                 <div class="z-dialog__header">
                     <slot name="title">
-                        <span class="z-dialog__title">{{ title }}</span>
+                        <span class="z-dialog__title"></span>
                     </slot>
                     <button
                         type="button"
@@ -20,7 +20,7 @@
                     <slot></slot>
                 </div>
 
-                <div class="z-dialog-footer">
+                <div ref="testDom" class="z-dialog-footer">
                     <slot name="footer"></slot>
                 </div>
             </div>
@@ -29,6 +29,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "VModel",
+
+  mounted() {
+    let $testDom = this.$refs.testDom;
+    console.log($testDom.classList);
+    console.log($testDom.className);
+  }
+};
 </script>
 

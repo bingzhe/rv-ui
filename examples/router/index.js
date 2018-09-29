@@ -24,6 +24,11 @@ export default new Router({
       path: "/layout",
       name: "layout",
       component: r => require.ensure([], () => r(require("../docs/layout.md")))
+    },
+    {
+      path: "/model",
+      name: "model",
+      component: r => require.ensure([], ()=> r(require("../docs/model.md")))
     }
   ]
 });
