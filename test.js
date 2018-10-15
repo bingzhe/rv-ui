@@ -21,3 +21,16 @@ var b2 = new Bar("b2");
 
 b1.speak();
 b2.speak();
+
+
+Array.isArray = function (arg) {
+    return Object.prototype.toString.call(arg) === '[Object Array]';
+}
+
+function getStrLen(str) {
+    if (str === null) return 0;
+    if (typeof str !== "string") {
+        str += "";
+    }
+    return str.replace(/[^\x00-\xff]/g, "01").length;
+}
